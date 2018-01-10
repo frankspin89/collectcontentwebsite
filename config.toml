@@ -1,0 +1,6 @@
+baseURL = "https://www.collectcontent.nl/"
+languageCode = "nl-nl"
+title = "CollectContent - Organiseer en produceer content"
+theme = "collectcontent"
+MetaDataFormat = "yaml"
+googleAnalytics = "UA-x"

@@ -1,0 +1,16 @@
+{{ $hero := .Params.hero }} {{ if $hero }} 
+{{ $hero := (trim $hero "/") | absURL }}
+
+<header class="site-header m6-b"  style="background-image: url('{{ $hero }}');">
+  <div class="wrapper p3-lr">
+    {{ partial "site-navigation.html" (dict "color" "white" "menu" .Site.Menus.main "base" .Site.BaseURL)}}
+    <div class="h-large site-header-inner">
+      <div class="w-small m9-b">
+        <h1 class="f-headline white m1-05-b">{{.Title}}</h1>
+        <p class="f4 white m2-b">{{.Params.subtitle}}</p>
+        <a href="#" class="button">Aanmelden voor onze beta</a>
+      </div>
+    </div>
+  </div>
+</header>
+{{ end }}

@@ -1,0 +1,70 @@
+<footer class="bg-gray-light clearfix">
+  <div class="wrapper p6-t m6-b">
+    <div class="grid grid-fourths">
+
+      <div class="grid-item">
+        <h5 class="f4 green m2-b">Mogelijkheden</h5>
+        <nav>
+          <ul class="footer-menu">
+            <li><a href="">Organiseer</a></li>
+            <li><a href="">Structureer</a></li>
+            <li><a href="">Produceer</a></li>
+            <li><a href="">Integreer</a></li>
+            <li><a href="">Publiceer</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="grid-item">
+        <h5 class="f4 green m2-b">Organisatie</h5>
+        <nav>
+          <ul class="footer-menu">
+            <li><a href="">Over ons</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Vacatures</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="grid-item">
+          <h5 class="f4 green m2-b">Kennisbank</h5>
+          <ul class="footer-menu">
+            <li><a href="">Over ons</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Vacatures</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+      </div>
+    
+      <div class="grid-item">
+          <h5 class="f4 green m2-b">Contactgegevens</h5>
+          <p class="m2-b">
+            <strong>CollectContent B.V.</strong><br>
+            lubeckweg 2<br>
+            9723 HE Groningen
+          </p>
+          <p>
+            Tel: 050 - 800 00 00<br>
+            E-mail: hallo@collectcontent.nl<br>
+            Support: Chat 24/7
+          </p>
+          </p>
+        </div>
+    </div>
+  </div>
+  <div class="wrapper m3-b">
+    <div class="grid grid-halves v-center">
+      <div class="grid-item">
+        <svg class="logo logo-orange">
+          <use xlink:href="#logo-orange" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+      </div>
+      <div class="grid-item">
+        <nav class="h-right">
+          {{ range .Site.Menus.footer }}
+          <a href="{{ .URL }}" class="gray no-underline m3-l">{{ .Name }}</a>
+          {{ end }}
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>

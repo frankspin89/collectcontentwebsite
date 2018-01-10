@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  #Vars
+\*------------------------------------*/
+
+:root {
+
+/*
+* Fonts
+*/
+
+  --font-family: "Source Sans Pro", "helvetica neue", "arial", ubuntu, roboto,
+    noto, "segoe ui", arial, sans-serif;
+  --font-family-heading: "Bitter", "helvetica neue", "arial", ubuntu,
+    roboto, noto, "segoe ui", arial, sans-serif;
+
+/*
+* Colors
+*/
+
+--white: #fff;
+--orange: #ff5b12;
+--gray: #7B7B7B;
+--gray-dark: #3B3E43;
+--gray-light: #F5F5F2;
+--green: #11AEAE;
+
+/*
+* Breakpoints
+*/
+
+  --site-width: 86rem;
+
+    @custom-media --breakpoint-small (min-width: 46rem);
+    @custom-media --breakpoint-medium (min-width: 59rem);
+
+}

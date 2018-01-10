@@ -1,0 +1,127 @@
+{{ define "header" }} {{ partial "header-home.html" . }} {{ end }}
+{{ define "main" }}
+
+<div class="wrapper">
+  <div class="w-medium text-center h-center m6-b">
+    <h2 class="f1">{{.Params.intro.title}}</h2>
+    <p>{{.Params.intro.text}}</p>
+  </div>
+</div>
+
+<div class="wrapper p3-lr m9-b">
+  <div class="grid grid-thirds grid-gap-large">
+  {{ range $index, $element :=  .Params.usps }}
+  <div class="grid-item">
+    <svg class="icon-{{.icon}} icon icon-large m1-05-b">
+      <use xlink:href="#icon-{{.icon}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+    </svg>
+    <h4 class="f3 green m05-b">{{.title}}</h4>
+    <p>{{.description}}</p>
+  </div>
+  {{ end }}
+  </div>
+</div>
+
+<div class="bg-gray-light clearfix m9-b">
+  <div class="wrapper">
+    <div class="grid grid-halves grid-gap-medium v-center p6-t m6-b">
+      <div class="grid-item">
+        <img src="images/home/video-dummy.png" alt="">
+      </div>
+      <div class="grid-item p3-lr p3-t">
+        <h2 class="f1 m2-b">{{.Params.video.title}}</h2>
+        <p class="m2-b">{{.Params.video.content_top}}</p>
+        <h5 class="f2 m2-b"><a href="#" class="no-underline green">Bekijk de video (120 seconden)</a></h5>
+        <p class="m2-b">{{.Params.video.content_bottom}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="features m9-b">
+<div class="wrapper">
+  <h2 class="f1 m6-b text-center">Bekijk een aantal gave mogelijkheden waarmee<br>je content kan produceren en plannen</h2>
+  <div class="feature-tabs">
+    <div class="grid grid-fives tabs m6-b" data-tabgroup="tab-group">
+      {{ range $index, $element :=  .Params.tabs }}
+      <div class="grid-item">
+        {{ if eq $index 0}}
+        <a href="#tab{{$index}}" class="tab active f4">
+          <div class="icon-wrap icon-round m1-b active">
+          <svg class="icon-small">
+            <use xlink:href="#icon-{{.icon}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          </div>
+          <span>{{.tab}}</span>
+        </a>
+        {{ else }}
+        <a href="#tab{{$index}}" class="tab f4">
+          <div class="icon icon-round m1-b">
+            <svg class="icon-small">
+              <use xlink:href="#icon-{{.icon}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </div>
+          <span>{{.tab}}</span>
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<div class="tabgroup" id="tab-group">
+  {{ range $index, $element :=  .Params.tabs }}
+  <div class="grid grid-halves" id="tab{{$index}}">
+    <div class="grid-item bg-cover" style="background-image: url({{.image}})">
+      &nbsp;
+    </div>
+    <div class="grid-item bg-gray-light p9-lr p9-t v-center h-medium flex">
+      <div class="m6-b">
+        <h3 class="f1 m2-b">{{.title}}</h3>
+        <p>{{.text}}</p>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+</section>
+
+<div class="wrapper">
+  <h2 class="f1 m6-b text-center">Veel gestelde vragen</h2>
+  <div class="grid grid-halves grid-gap-medium-large m6-b">
+    <div class="grid-item">
+      <h4 class="f4 green m05-b">Hoe meld ik mij aan voor jullie beta?</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo varius tortor dapibus varius. Aenean blandit non sem in lobortis. Aliquam tempus in eros in facilisis. Nullam venenatis congue mattis. Integer in faucibus eros, in ullamcorper tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla magna eros, commodo eget arcu eget, viverra dignissim nunc. Pellentesque commodo ornare tortor, eget lobortis est pellentesque ut. Suspendisse potenti. Sed molestie ac arcu a tempus.</p>
+    </div>
+    <div class="grid-item">
+      <h4 class="f4 green m05-b">Hoeveel moet ik voor CollectContent betalen?</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo varius tortor dapibus varius. Aenean blandit non sem in lobortis. Aliquam tempus in eros in facilisis. Nullam venenatis congue mattis. Integer in faucibus eros, in ullamcorper tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla magna eros, commodo eget arcu eget, viverra dignissim nunc. Pellentesque commodo ornare tortor, eget lobortis est pellentesque ut. Suspendisse potenti. Sed molestie ac arcu a tempus.</p>
+    </div>
+    <div class="grid-item">
+      <h4 class="f4 green m05-b">Kan ik een demo krijgen van CollectContent?</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo varius tortor dapibus varius. Aenean blandit non sem in lobortis. Aliquam tempus in eros in facilisis. Nullam venenatis congue mattis. Integer in faucibus eros, in ullamcorper tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla magna eros, commodo eget arcu eget, viverra dignissim nunc. Pellentesque commodo ornare tortor, eget lobortis est pellentesque ut. Suspendisse potenti. Sed molestie ac arcu a tempus.</p>
+    </div>
+    <div class="grid-item">
+      <h4 class="f4 green m05-b">Wanneer is CollectContent klaar?</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo varius tortor dapibus varius. Aenean blandit non sem in lobortis. Aliquam tempus in eros in facilisis. Nullam venenatis congue mattis. Integer in faucibus eros, in ullamcorper tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla magna eros, commodo eget arcu eget, viverra dignissim nunc. Pellentesque commodo ornare tortor, eget lobortis est pellentesque ut. Suspendisse potenti. Sed molestie ac arcu a tempus.</p>
+    </div>
+    <div class="grid-item">
+      <h4 class="f4 green m05-b">Kan ik mijn huidige website koppelen?</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo varius tortor dapibus varius. Aenean blandit non sem in lobortis. Aliquam tempus in eros in facilisis. Nullam venenatis congue mattis. Integer in faucibus eros, in ullamcorper tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla magna eros, commodo eget arcu eget, viverra dignissim nunc. Pellentesque commodo ornare tortor, eget lobortis est pellentesque ut. Suspendisse potenti. Sed molestie ac arcu a tempus.</p>
+    </div>
+    <div class="grid-item">
+      <h4 class="f4 green m05-b">Kan ik ook bij jullie werken of stage lopen?</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo varius tortor dapibus varius. Aenean blandit non sem in lobortis. Aliquam tempus in eros in facilisis. Nullam venenatis congue mattis. Integer in faucibus eros, in ullamcorper tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla magna eros, commodo eget arcu eget, viverra dignissim nunc. Pellentesque commodo ornare tortor, eget lobortis est pellentesque ut. Suspendisse potenti. Sed molestie ac arcu a tempus.</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="w-medium h-center text-center m6-b">
+  <h2 class="f1 m3-b text-center">Wil jij één van de eerste zijn die gebruik kan 
+    maken van CollectContent? </h2>
+    <a href="#" class="button">Meld je aan voor onze beta</a>
+  </div>
+</div>
+
+{{ end }}

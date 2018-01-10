@@ -1,0 +1,35 @@
+{{$style := .color | default "white"}}
+
+  <nav class="main-navigation p3-t" id="site-navigation">
+    <a href="{{ .base }}" class="m3-r" rel="home" title="Homepage CollectContent">
+      <svg class="logo logo-white">
+        <use xlink:href="#logo-white" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+      </svg>
+    </a>
+    {{ if .menu}}
+    <div class="menu">
+    <div class="menu-left">
+      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+        <div id="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <ul class="main-navigation-items">
+        {{ range .menu }}
+        <li>
+          <a class="no-underline white" href="{{ .URL }}" title="{{ .Name }} page">
+            {{ .Name }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="menu-right">
+      <a href="#" class="button button-transparent">Probeer het uit</a>
+    </div>
+   </div>
+    {{ end }}
+  </nav>
